@@ -11,5 +11,5 @@ before_script:
 build_job:
   stage: build
   script: 
-    - vapor build
-    - vapor run
+    - docker build -t vapor-image .
+    - docker run --name vapor-server -p 8080:8080 vapor-image
