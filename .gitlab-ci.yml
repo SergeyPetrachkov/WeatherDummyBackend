@@ -1,0 +1,15 @@
+stages:
+ - build
+
+
+before_script:
+  - export LANG=UTF-8
+  - env
+  - locale
+
+
+build_job:
+  stage: build
+  script: 
+    - vapor build
+    - vapor run
