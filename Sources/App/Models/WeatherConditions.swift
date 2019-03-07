@@ -13,10 +13,10 @@ final class WeatherConditions: SQLiteModel {
   var id: Int?
   
   /// A temperature parameter, let's keep it simple for now
-  var temperature: Double
+  var temperature: Temperature
   
   /// Creates a new `WeatherConditions`.
-  init(id: Int? = nil, temperature: Double) {
+  init(id: Int? = nil, temperature: Temperature) {
     self.id = id
     self.temperature = temperature
   }
