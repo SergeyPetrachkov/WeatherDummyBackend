@@ -20,4 +20,5 @@ public func routes(_ router: Router) throws {
   
   let weatherController = WeatherController()
   router.get("weather", use: weatherController.index)
+  router.post("weatherFeed", use: weatherController.getWeatherFeed(_:))
 }

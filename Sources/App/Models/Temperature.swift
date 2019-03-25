@@ -8,10 +8,10 @@
 import FluentSQLite
 import Vapor
 
-enum TemperatureUnit: String, Encodable, Decodable {
-  case celsius
-  case fahrenheit
-  case kelvin
+enum TemperatureUnit: Int, Encodable, Decodable {
+  case kelvin = 0
+  case celsius = 1
+  case fahrenheit = 2
 }
 
 final class Temperature: SQLiteModel {
